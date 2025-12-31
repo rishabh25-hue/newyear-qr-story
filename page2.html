@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funny</title>
+</head>
+
+<body style="
+margin:0;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#111;
+color:#0f0;
+text-align:center;
+font-size:26px;
+font-family:Arial;
+">
+
+<audio autoplay loop>
+  <source src="{{ url_for('static', filename='music.mp3') }}" type="audio/mpeg">
+</audio>
+
+<h1>😂 Funny Time 😂</h1>
+
+<p>
+{{name}},<br><br>
+New Year resolution strong hai,<br>
+par alarm weak 😜
+</p>
+
+<script>
+setTimeout(()=>{
+  window.location.href="/motivation/{{name}}";
+},12000);
+</script>
+
+</body>
+</html>

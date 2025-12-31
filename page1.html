@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year</title>
+</head>
+
+<body style="
+margin:0;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:black;
+color:gold;
+text-align:center;
+font-size:28px;
+font-family:Arial;
+">
+
+<audio autoplay loop>
+  <source src="{{ url_for('static', filename='music.mp3') }}" type="audio/mpeg">
+</audio>
+
+<h1>🎆 HAPPY NEW YEAR 🎆</h1>
+<h2>Dear {{name}} 💖</h2>
+<p>Welcome to a brand new beginning ✨</p>
+
+<script>
+setTimeout(()=>{
+  window.location.href="/funny/{{name}}";
+},12000);
+</script>
+
+</body>
